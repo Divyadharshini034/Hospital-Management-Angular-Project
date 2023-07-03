@@ -1,0 +1,53 @@
+.mat-dialog-content {
+    width: 600px;
+  }
+  
+  .mat-grid-list {
+    overflow: hidden;
+  }
+  
+  .mat-radio-button {
+    margin-right: 15px;
+  }
+ .main-body{
+  background-image: url('/assets/cc.jpg');
+ }
+ 
+
+ header{
+  position: fixed ;
+  left: 0;right: 0;
+  background:white;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between ;
+  z-index: 1000;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  height: 50px;
+}
+header .logo{
+  font-size: 30px;
+  color: 	 #4d88ff;
+  padding: 5px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+header .navbar a{
+  font-size: 20px;
+  padding: 0 15px;
+  color: black;
+  text-decoration: none;
+}
+
+header .navbar a:hover{
+  color: var(--pink);
+}
+
+ .logout-mode{
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+  font-size: large;
+}
+

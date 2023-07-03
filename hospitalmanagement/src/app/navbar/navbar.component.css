@@ -1,0 +1,185 @@
+
+
+header{
+    position: fixed ;
+    top: 0;left: 0;right: 0;
+    background:white;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    height: 50px;
+}
+header .logo{
+    font-size: 30px;
+    color: #333;
+    padding: 5px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+header .navbar a{
+    font-size: 20px;
+    padding: 0 15px;
+    color: black;
+    text-decoration: none;
+}
+
+header .navbar a:hover{
+    color: var(--pink);
+}
+
+header .icons a{
+    font-size: 20px;
+    color:#333;
+    padding: 0 10px;
+    text-decoration: none;
+}
+ header .icons a:hover{
+    color: var(--pink);
+ }
+
+
+ header .shopping-cart{
+    position: absolute;
+    top: 110%;right: -110%;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 30rem;
+    background: #fff;
+ }
+
+header .shopping-cart.active{
+    right:2rem ;
+    transition: .4s linear;
+}
+
+header .shopping-cart .cartbox{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+ }
+
+ header .shopping-cart .cartbox img{
+    height: 10rem;
+ }
+
+
+ header .shopping-cart .cartbox .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;right: 2rem;
+    transform: translateY(-50%);
+ }
+
+ header .shopping-cart .cartbox .fa-trash:hover{
+    color:var(--pink);
+ }
+
+ header .shopping-cart .cartbox .content h3{
+    color: var(--pink);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+ }
+
+
+ header .shopping-cart .cartbox .content .cart-quantity{
+    border:1px solid var(--pink);
+    outline-color: #6fd649;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1rem;
+    
+ }
+
+ header .shopping-cart .total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1 px solid var(--pink);
+    
+ }
+
+
+ header .shopping-cart .total .total-title{
+    font-size: 1 rem;
+    font-weight:600 ;
+ }
+
+ header .shopping-cart .total .total-price{
+    margin-left: .5rem;
+ }
+
+
+
+ header .shopping-cart .btn{
+    display: block;
+    text-align: center;
+ }
+
+ header #toggler{
+    display: none;
+ }
+ header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: 0.5rem solid rgba(0,0,0,.3);
+    display: none;
+ }
+
+ nav .logo-name{
+   display: flex;
+   align-items: center;
+}
+nav .logo-image{
+   display: flex;
+   justify-content: center;
+   min-width: 45px;
+}
+nav .logo-image img{
+   width: 40px;
+   object-fit: cover;
+   border-radius: 50%;
+}
+
+nav .logo-name .logo_name{
+   font-size: 22px;
+   font-weight: 600;
+   color: var(--text-color);
+   margin-left: 14px;
+   transition: var(--tran-05);
+}
+nav.close .logo_name{
+   opacity: 0;
+   pointer-events: none;
+}
+.btn{
+	display: block;
+	width: 56;
+	height: 50;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right,  #66b3ff, #38d39f,  #66b3ff);
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+   padding: 0 5;
+}
+.btn:hover{
+	background-position: right;
+}

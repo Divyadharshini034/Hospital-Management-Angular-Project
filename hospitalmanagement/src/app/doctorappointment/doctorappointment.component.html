@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<br><br>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of pat; let i=index">
+            <div class="card col-md-3" style="height: 23rem;width: 13rem; ">
+                <img src="/assets/hj.png" alt=" " height="150" style="border-radius: 4px;"  >
+                <p> </p>
+                <h3  style="text-align: center; font-weight: bold;" >{{item.doctor_name}}</h3>
+                <h3  style="text-align: center;" >{{item. patient_name}}</h3>
+                <h3 style="text-align: center;">{{item.admission_date}}</h3>
+                <h3 style="text-align: center;">{{item.gender}} </h3>
+           
+            </div>
+        </ng-container>
+
+    </div>
+</div>

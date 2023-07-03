@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<br><br>
+<br>
+
+<body>
+	<img class="wave" src="img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="assets/aa.jpg">
+		</div>
+		<div class="login-content">
+			<form (ngSubmit)="login(adminName.value, adminPassword.value)" action="index.html">
+				<img src="assets/user.jpg">
+				<h2 class="title">Welcome</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   	
+                      <input type="text" placeholder="Username" required #adminName>
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		   
+                     <input type="password" placeholder="Password" required #adminPassword>
+            	   </div>
+            	</div>
+            	
+            	<input type="submit" class="btn" value="Login">
+            </form>
+        </div>
+    </div>
+   
+</body>

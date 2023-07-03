@@ -1,0 +1,39 @@
+
+<body>
+	<img class="wave" src="img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="assets/ddd.png">
+		</div>
+		<div class="login-content">
+			
+      <form (ngSubmit)="login(doctoremail.value, doctorpassword.value)" action="index.html">
+				<img src="assets/dd.jpg">
+				<h2 class="title">Welcome</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+                  <input type="text" placeholder="Email" required #doctoremail>
+                    
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		   
+                  <input type="password" placeholder="Password" required #doctorpassword>
+            	   </div>
+            	</div>
+            	
+            	<input type="submit" class="btn" value="Login">
+				<span  style="font-weight: bold;">Dont't have an account?<button style="color: white" class="btn"  routerLink="/doctorregister" >Sign up</button></span>
+		
+            </form>
+        </div>
+    </div>
+   
+</body>

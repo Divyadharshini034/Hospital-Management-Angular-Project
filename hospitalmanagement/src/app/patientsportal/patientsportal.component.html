@@ -1,0 +1,14 @@
+<p>vew doctores</p>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of depart ">
+            <div class="card col-md-3">
+                <img src="assets/1.jpg" width="100px" alt=" " >
+                <h1>Departments</h1>
+                <p> {{item.department}}</p>
+                <button class="btn btn-primary" routerLink="/seedoctors" >See Doctors</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>

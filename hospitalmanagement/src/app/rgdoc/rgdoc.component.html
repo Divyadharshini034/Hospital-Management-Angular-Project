@@ -1,0 +1,21 @@
+
+<app-navbar></app-navbar>
+<br>
+<br>
+<br>
+<h1 style="font-weight: bolder; color: blue;">Registered Doctors</h1>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of drg">
+            <div class="card col-md-3" style="height: 22rem;width: 13rem; ">
+                <img src="/assets/hj.png" alt=" "  >
+                <p></p>
+                <h1  style="text-align: center;" >{{item.doctorname}}</h1>
+                <h2 style="text-align: center;">{{item.doctorusername}}</h2>
+                <h3 style="text-align: center;">{{item.doctoremail}} </h3>
+           
+            </div>
+        </ng-container>
+
+    </div>
+</div>

@@ -1,0 +1,78 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+
+<body>
+	<img class="wave" src="img/wave.png">
+	<div class="container">
+		
+		<div class="login-content">
+      <form [formGroup]="signupForm" (ngSubmit)="signup()"  action="index.html">
+				<img src="assets/user.jpg">
+				<h2 class="title">Signup</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   	
+                  <input type="text" id="patientName" placeholder="Name" formControlName="patientName" required>
+                  <div *ngIf="signupForm.get('patientName')?.invalid && signupForm.get('patientName')?.touched" class="error">
+                    Doctor Name is required.
+                  </div>
+
+
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+
+                  <input type="email" id="patientusername" placeholder="UserName" formControlName="patientusername" required>
+                  <div *ngIf="signupForm.get('patientusername')?.invalid && signupForm.get('patientusername')?.touched" class="error">
+                    Email is required and must be a valid email address.
+                  </div>
+            	   </div>
+            	</div>
+
+
+              <div class="input-div pass">
+                <div class="i"> 
+                   <i class="fas fa-lock"></i>
+                </div>
+                <div class="div">
+
+                  <input type="email" id="patientemail" placeholder="Email" formControlName="patientemail" required>
+                  <div *ngIf="signupForm.get('patientemail')?.invalid && signupForm.get('patientemail')?.touched" class="error">
+                    Email is required and must be a valid email address.
+                  </div>
+               </div>
+            </div>
+
+            <div class="input-div pass">
+              <div class="i"> 
+                 <i class="fas fa-lock"></i>
+              </div>
+              <div class="div">
+
+                <input type="password" id="patientpassword" placeholder="Password" formControlName="patientpassword" required>
+                <div *ngIf="signupForm.get('patientpassword')?.invalid && signupForm.get('patientpassword')?.touched" class="error">
+                  Password is required.
+                </div>
+             </div>
+          </div>
+            	
+            	<input type="submit" class="btn" value="sign up">
+              <span  style="font-weight: bold;">Already have an account?<button style="color: white" class="btn"  routerLink="/pateintsignin" >Sign in</button></span>
+             
+            </form>
+        </div>
+
+        <div class="img">
+          <img src="assets/aa.jpg">
+        </div>
+    </div>
+   
+</body>

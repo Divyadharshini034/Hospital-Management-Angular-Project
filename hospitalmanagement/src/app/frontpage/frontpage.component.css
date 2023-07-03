@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.home .container .content h1{
+    font-size: 50px;
+ 
+    color:	#00BFFF;
+}
+
+.home .container .content h1 span{
+    color: var(--black-light-color);
+}
+
+.home .container .content .h3{
+    font-size: 20rem;
+}
+

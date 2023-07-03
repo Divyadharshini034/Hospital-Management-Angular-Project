@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+  <br><br>
+
+
+
+
+ <header>
+  
+  <a href="#" class="logo"> <span> </span> Consults </a>
+
+ <nav class="navbar" action="index.html">
+  <ul class="logout-mode">
+   
+     <img src="assets/log.png" alt="" routerLink="/frontpage" style="height:40px ;">
+        
+   
+  </ul>
+   
+ </nav>
+ 
+
+ 
+</header> 
+<br>
+
+  <div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of doc">
+            <div class="card col-md-3" style="height: 22rem;width: 13rem; ">
+                <img src="/assets/jjj.png" alt=" "  >
+                <p></p>
+                <h1  style="text-align: center;" >{{item.name}}</h1>
+                <h2 style="text-align: center; color: #7733ff;">{{item.department}}</h2>
+                <button mat-raised-button color="primary" (click)="openAddEditEmpForm()">
+                  Booking Appointment
+                </button>
+           
+            </div>
+        </ng-container>
+
+    </div>
+</div>

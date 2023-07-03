@@ -1,0 +1,77 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+<br>
+<body>
+	
+	<div class="container">
+		
+		<div class="login-content">
+      <form [formGroup]="signupForm" (ngSubmit)="signup()"  action="index.html">
+				<img src="assets/dd.jpg">
+				<h2 class="title">Doctor Signup</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   	
+                  <input type="text" id="doctorname" formControlName="doctorname" required>
+                  <div *ngIf="signupForm.get('doctorname')?.invalid && signupForm.get('doctorname')?.touched" class="error">
+                    Doctor Name is required.
+                  </div>
+
+
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+
+                  <input type="email" id="doctorusername" formControlName="doctorusername" required>
+                  <div *ngIf="signupForm.get('doctorusername')?.invalid && signupForm.get('doctorusername')?.touched" class="error">
+                    Email is required and must be a valid email address.
+                  </div>
+            	   </div>
+            	</div>
+
+
+              <div class="input-div pass">
+                <div class="i"> 
+                   <i class="fas fa-lock"></i>
+                </div>
+                <div class="div">
+
+                  <input type="email" id="doctoremail" formControlName="doctoremail" required>
+                  <div *ngIf="signupForm.get('doctoremail')?.invalid && signupForm.get('doctoremail')?.touched" class="error">
+                    Email is required and must be a valid email address.
+                  </div>
+               </div>
+            </div>
+
+            <div class="input-div pass">
+              <div class="i"> 
+                 <i class="fas fa-lock"></i>
+              </div>
+              <div class="div">
+
+                <input type="password" id="doctorpassword" formControlName="doctorpassword" required>
+                <div *ngIf="signupForm.get('doctorpassword')?.invalid && signupForm.get('doctorpassword')?.touched" class="error">
+                  Password is required.
+                </div>
+             </div>
+          </div>
+            	
+            	<input type="submit" class="btn" value="sign up">
+              <span  style="font-weight: bold;">Already have an account?<button style="color: white" class="btn"  routerLink="/doctorsignin" >Sign in</button></span>
+            
+            </form>
+        </div>
+        <div class="img">
+          <img src="assets/cd.png">
+        </div>
+    </div>
+   
+</body>

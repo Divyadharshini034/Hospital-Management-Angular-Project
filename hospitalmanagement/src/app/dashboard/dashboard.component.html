@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+  
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!----===== Iconscout CSS ===== -->
+    
+
+    <title>Admin Dashboard Panel</title>
+</head>
+
+
+
+
+<app-navbar></app-navbar>
+<br><br>
+<br>
+<body>
+    <nav>
+        <br>
+        <br>
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="assets/doctor.png" alt="">
+            </div>
+
+            <span class="logo_name">Hospital Records</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Doctors</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">Patients</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Appoinments</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-thumbs-up"></i>
+                    <span class="link-name">Register Doctors</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Register Patients</span>
+                </a></li>
+                
+                <br>
+
+                <ul class="logout-mode">
+                    <li><a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+    
+                   
+                </ul>
+            </ul>
+            
+            
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <ng-container >
+                            <div class="card col-md-3" style="height: 15rem;width: 13rem; ">
+                                <img src="assets/jk.jpg" alt=" " height="150" style="border-radius: 100rem;" >
+                                <p></p>
+                                <button class="btn btn-primary" routerLink="/doctor" >Doctors</button>
+                            </div>
+                        </ng-container>
+
+
+                        <ng-container >
+                            <div class="card col-md-3" style="height: 15rem;width: 13rem; " >
+                                <img src="assets/patiet.jpg" height="150" alt=" " style="border-radius: 50%;" >
+                               
+                                <p></p>
+                                <button class="btn btn-primary" routerLink="/patients" width="50rem" >Patients</button>
+                            </div>
+                        </ng-container>
+
+                        <ng-container >
+                            <div class="card col-md-3"  style="height: 15rem;width: 13rem; ">
+                                <img src="assets/appoin.jpg" height="150" alt=" " style="border-radius: 50%;">
+                               
+                                <p></p>
+                                <button class="btn btn-primary"  routerLink="/doctorappoinment" >Appoinments</button>
+                            </div>
+                        </ng-container>
+
+                        <ng-container >
+                            <div class="card col-md-3"  style="height: 15rem;width: 13rem; ">
+                                <img src="assets/fff.jpg" height="150" alt=" "style="border-radius: 50%;" >
+                               
+                                <p></p>
+                                <button class="btn btn-primary"  routerLink="/rgdoc" >Register Doctors</button>
+                            </div>
+                        </ng-container>
+
+                        <ng-container >
+                            <div class="card col-md-3"  style="height: 15rem;width: 13rem; ">
+                                <img src="assets/reg.png" height="150" alt=" " style="border-radius: 50%;">
+                               
+                                <p></p>
+                                <button class="btn btn-primary"  routerLink="/rgpat" >Register Patients</button>
+                            </div>
+                        </ng-container>
+                
+                    </div>
+                </div>
+                         
+</div>
+</div>
+
+          
+    </section>
+                
+
+    <script src="script.js"></script>
+
