@@ -1,0 +1,27 @@
+
+
+<app-navbar></app-navbar>
+<br>
+<br>
+<br>
+
+
+<div class="container">
+  <div class="row">
+      <ng-container *ngFor="let item of doctor">
+          <div class="card col-md-3" style="height: 22rem;width: 13rem; ">
+              <img src="assets/ll (1).jpg" alt=" "  >
+              <p></p>
+              <h2  style="text-align: center;" ><span style="font-weight: bold;">Name:</span> {{item.name}}</h2>
+              <p style="text-align: center;"><span style="font-weight: bold;">Qualification:</span>{{item.qualification}}</p>
+              <p style="text-align: center;"><span style="font-weight: bold;">Activate-Status:</span>{{item.isActivated}} </p>
+         
+          </div>
+      </ng-container>
+
+  </div>
+</div>
+
+  
+
+

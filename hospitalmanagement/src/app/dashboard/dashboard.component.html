@@ -35,24 +35,24 @@
 
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="#">
+                <li><a href="#" routerLink="/doctor">
                     <i class="uil uil-estate"></i>
-                    <span class="link-name">Doctors</span>
+                    <span class="link-name"  >Doctors</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="#" routerLink="/patients">
                     <i class="uil uil-files-landscapes"></i>
                     <span class="link-name">Patients</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="#" routerLink="/doctorappoinment">
                     <i class="uil uil-chart"></i>
                     <span class="link-name">Appoinments</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="#" routerLink="/rgdoc">
                     <i class="uil uil-thumbs-up"></i>
                     <span class="link-name">Register Doctors</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-comments"></i>
+                    <i class="uil uil-comments" routerLink="/rgpat" ></i>
                     <span class="link-name">Register Patients</span>
                 </a></li>
                 
@@ -123,6 +123,15 @@
                                
                                 <p></p>
                                 <button class="btn btn-primary"  routerLink="/rgpat" >Register Patients</button>
+                            </div>
+                        </ng-container>
+
+                        <ng-container >
+                            <div class="card col-md-3"  style="height: 15rem;width: 13rem; ">
+                                <img src="assets/ll (1).jpg" height="150" alt=" " style="border-radius: 50%;">
+                               
+                                <p></p>
+                                <button class="btn btn-primary"  routerLink="/activate" >Active Doctors</button>
                             </div>
                         </ng-container>
                 

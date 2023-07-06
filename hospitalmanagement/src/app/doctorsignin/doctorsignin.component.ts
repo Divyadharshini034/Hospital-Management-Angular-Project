@@ -12,10 +12,10 @@ export class DoctorsigninComponent {
 
   constructor(private Service: AuthService, private router: Router) { }
 
-  login(doctoremail: string, doctorpassword: string): void {
-    this.Service.signInDoctor(doctoremail, doctorpassword).subscribe(
+  login(email: string, password: string): void {
+    this.Service.signInDoctor(email, password).subscribe(
       response => {
-        localStorage.setItem('Email', doctoremail);
+        localStorage.setItem('UserName', email);
         const token = response;
         console.log(token);
         
@@ -24,7 +24,7 @@ export class DoctorsigninComponent {
         this.router.navigateByUrl('bookdoc');
       },
       error => {
-        alert("Incorrect Username/Password")
+        alert("Incorrect Email/Password")
         console.log(error);
       }
     );

@@ -33,7 +33,7 @@ export class DoctorService  {
   }
 
 
-  private apiUrl = 'https://localhost:7180/api/DoctorRegistrations';
+  private apiUrl = 'https://localhost:7180/api/DoctorRegistration';
 
  
 
@@ -44,7 +44,13 @@ export class DoctorService  {
 
   getdoctorregister():Observable<any>
   {
-    return this.httpclient.get<any>(this.apiUrl);
+    return this.httpclient.get('https://localhost:7180/api/Doctors/deactivated');
   }
+
+
+  getactivatedoctors():Observable<any>{
+    return this.httpclient.get('https://localhost:7180/api/Doctors/activated');
+  }
+
 
 }

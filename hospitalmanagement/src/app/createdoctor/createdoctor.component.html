@@ -1,8 +1,8 @@
 <div mat-dialog-title>
-    <h1> Create Doctor Form</h1>
+    <h1 style="text-align: center;"> Create Doctor Form</h1>
 </div>
 <form [formGroup]="doctorForm" (ngSubmit)="onFormSubmit()">
-    <div mat-dialog-content class="content">
+    <div mat-dialog-content style="width: 500px;" class="content">
         <div class="row">
             
             
@@ -63,15 +63,30 @@
               </mat-select>
             </mat-form-field>
   
-            <mat-form-field>
+           
+
+            <mat-form-field color="accent" appearance="fill">
               <mat-label>Birthdate</mat-label>
               <input matInput [matDatepicker]="picker" formControlName="birthdate">
-              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-hint>DD/MM/YYYY</mat-hint>
               <mat-datepicker-toggle matSuffix  [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker [startView]="'month'" #picker></mat-datepicker>
               <mat-error *ngIf="doctorForm.get('birthdate')?.invalid || doctorForm.get('birthdate')?.dirty || doctorForm.get('birthdate')?.touched">Choose valid birthdate</mat-error>
             </mat-form-field>
+           
         </div>
+
+        <div>
+
+          <mat-label class="me-5">Activate Status : </mat-label>
+          <br>
+          <mat-radio-group aria-label="Select a status" color="primary" formControlName="isActivated">
+            <mat-radio-button value="true">Active</mat-radio-button>
+            <mat-radio-button value="false">Deactive</mat-radio-button>
+          
+          </mat-radio-group>
+        </div>
+
 
        
         </div>

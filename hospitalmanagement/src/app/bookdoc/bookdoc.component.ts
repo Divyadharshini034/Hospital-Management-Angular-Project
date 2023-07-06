@@ -6,6 +6,8 @@ import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { DoctorService } from '../services/doctor.service';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Doctors } from '../models/doctor';
 
 @Component({
   selector: 'app-bookdoc',
@@ -15,47 +17,21 @@ import { Router } from '@angular/router';
 export class BookdocComponent implements OnInit {
 
 
-  displayedColumns: string[] = [
-    'patient_id',
-    'patient_name',
-         'mobile',
-         'gender',
-         'admission_date',
-        
-      
-  ];
-  dataSource!: MatTableDataSource<any>;
+ doctor:Doctors[]=[];
 
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
-
-  constructor(private dialog:MatDialog,private s:DoctorService, private service:PatientsService,private router:Router){}
+  constructor(private httpclient:HttpClient,private dialog:MatDialog,private s:DoctorService, private service:PatientsService,private router:Router){}
 
   ngOnInit(): void {
-      this.getpatients();
+      this.getdoctoractive()
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
+  getdoctoractive()
+  {
+    this.s.getactivatedoctors().subscribe(r=>{
+      console.log(r);
+      this.doctor=r;
+    })
   }
-  
-  getpatients() {
-    this.service.getAllPatients().subscribe({
-      next: (res) => {
-        this.dataSource = new MatTableDataSource(res);
-        this.dataSource.sort = this.sort;
-        this.dataSource.paginator = this.paginator;
-      },
-      error: console.log,
-    });
-  }
-
-
   onLogOut(){
     this.router.navigateByUrl('frontpage');
   }

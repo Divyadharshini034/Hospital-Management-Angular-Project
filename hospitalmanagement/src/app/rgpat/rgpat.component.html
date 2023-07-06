@@ -8,12 +8,12 @@
 <div class="container">
     <div class="row">
         <ng-container *ngFor="let item of rp">
-            <div class="card col-md-3" style="height: 22rem;width: 13rem;  "  >
-                <img src="/assets/patient (1).png" alt=" "  style="border-radius: 50%;">
-                <p></p>
-                <h1  style="text-align: center;" >{{item.patientName}}</h1>
-                <h2 style="text-align: center;">{{item.patientusername}}</h2>
-                <h3 style="text-align: center;">{{item.patientemail}} </h3>
+            <div class="card col-md-3" style="height: 22rem;width: 16rem;  "  >
+                <img src="/assets/boy (1).png" alt=" "  style="border-radius: 50%;">
+               
+                <p style="text-align: center;" ><span style="font-weight: bold;">Patient Name:</span>{{item.patientName}}</p>
+                <p style="text-align: center;"><span style="font-weight: bold;">Username:</span>{{item.patientusername}}</p>
+                <p style="text-align: center;"><span style="font-weight: bold;">Email:</span>{{item.patientemail}} </p>
            
             </div>
         </ng-container>

@@ -23,10 +23,12 @@ import { AboutComponent } from './about/about.component';
 import { EmergencyComponent } from './emergency/emergency.component';
 import { ContactComponent } from './contact/contact.component';
 import { DepartmentComponent } from './department/department.component';
+import { UsericonComponent } from './usericon/usericon.component';
+import { ActivatedComponent } from './activated/activated.component';
 
 
 const routes: Routes = [
-  {path:'', redirectTo:'frontpage',pathMatch:'full'},
+  {path:'', title:'Hospital Management', redirectTo:'frontpage',pathMatch:'full'},
   {path:'frontpage',component:FrontpageComponent},
   
   {path:'doctor',component:DoctorComponent},
@@ -50,7 +52,9 @@ const routes: Routes = [
   {path:'about',component:AboutComponent},
   {path:'emergency',component:EmergencyComponent},
   {path:'contact',component:ContactComponent},
-  {path:'department',component:DepartmentComponent}
+  {path:'department',component:DepartmentComponent},
+  {path:'usericon',component:UsericonComponent},
+  {path:'activate',component:ActivatedComponent}
 ];
 
 @NgModule({

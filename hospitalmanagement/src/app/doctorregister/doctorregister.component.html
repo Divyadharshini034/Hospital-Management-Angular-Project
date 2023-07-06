@@ -16,7 +16,7 @@
            		   </div>
            		   <div class="div">
            		   	
-                  <input type="text" id="doctorname" formControlName="doctorname" required>
+                  <input type="text" id="doctorname" placeholder="Name" formControlName="doctorname" required>
                   <div *ngIf="signupForm.get('doctorname')?.invalid && signupForm.get('doctorname')?.touched" class="error">
                     Doctor Name is required.
                   </div>
@@ -24,15 +24,60 @@
 
            		   </div>
            		</div>
+
+
+               
+
+
+
+            <div class="input-div pass">
+              <div class="i"> 
+                 <i class="fas fa-lock"></i>
+              </div>
+              <div class="div">
+
+              <input type="text" id="doctorusername" placeholder="Username" formControlName="doctorusername" required>
+              <div *ngIf="signupForm.get('doctorusername')?.invalid && signupForm.get('doctorusername')?.touched" class="error">
+                Username is required 
+              </div>
+             </div>
+          </div>
+
+
+          <div class="input-div pass">
+            <div class="i"> 
+               <i class="fas fa-lock"></i>
+            </div>
+            <div class="div">
+
+            <input type="email" id="doctoremail" placeholder="Email" formControlName="doctoremail" required>
+            <div *ngIf="signupForm.get('doctoremail')?.invalid && signupForm.get('doctoremail')?.touched" class="error">
+              Email is required and must be a valid email address.
+            </div>
+           </div>
+        </div>
+
+        <div class="input-div pass">
+          <div class="i"> 
+             <i class="fas fa-lock"></i>
+          </div>
+          <div class="div">
+
+          <input type="text" id="doctormobile" placeholder="Mobile" formControlName="doctormobile" required>
+          <div *ngIf="signupForm.get('doctormobile')?.invalid && signupForm.get('doctormobile')?.touched" class="error">
+            Mobile Number is required 
+          </div>
+         </div>
+      </div>
            		<div class="input-div pass">
            		   <div class="i"> 
            		    	<i class="fas fa-lock"></i>
            		   </div>
            		   <div class="div">
 
-                  <input type="email" id="doctorusername" formControlName="doctorusername" required>
-                  <div *ngIf="signupForm.get('doctorusername')?.invalid && signupForm.get('doctorusername')?.touched" class="error">
-                    Email is required and must be a valid email address.
+                  <input type="password" id="doctorpassword" placeholder="Password" formControlName="doctorpassword" required>
+                  <div *ngIf="signupForm.get('doctorpassword')?.invalid && signupForm.get('doctorpassword')?.touched" class="error">
+                    Password Must be strong 
                   </div>
             	   </div>
             	</div>
@@ -44,9 +89,9 @@
                 </div>
                 <div class="div">
 
-                  <input type="email" id="doctoremail" formControlName="doctoremail" required>
-                  <div *ngIf="signupForm.get('doctoremail')?.invalid && signupForm.get('doctoremail')?.touched" class="error">
-                    Email is required and must be a valid email address.
+                  <input type="text" id="docqualification" placeholder="Qualification" formControlName="docqualification" required>
+                  <div *ngIf="signupForm.get('docqualification')?.invalid && signupForm.get('docqualification')?.touched" class="error">
+                    Qualification is required 
                   </div>
                </div>
             </div>
@@ -57,12 +102,40 @@
               </div>
               <div class="div">
 
-                <input type="password" id="doctorpassword" formControlName="doctorpassword" required>
-                <div *ngIf="signupForm.get('doctorpassword')?.invalid && signupForm.get('doctorpassword')?.touched" class="error">
+                <input type="text" id="docgender" placeholder="Gender" formControlName="docgender" required>
+                <div *ngIf="signupForm.get('docgender')?.invalid && signupForm.get('docgender')?.touched" class="error">
                   Password is required.
                 </div>
              </div>
           </div>
+
+         
+
+        <div class="input-div pass">
+          <div class="i"> 
+             <i class="fas fa-lock"></i>
+          </div>
+          <div class="div">
+
+            <input type="text" id=" docdepartment" placeholder="Department" formControlName="docdepartment" required>
+            <div *ngIf="signupForm.get(' docdepartment')?.invalid && signupForm.get('docdepartment')?.touched" class="error">
+              department is required.
+            </div>
+         </div>
+      </div>
+
+      <div class="input-div pass">
+        <div class="i"> 
+           <i class="fas fa-lock"></i>
+        </div>
+        <div class="div">
+
+          <input type="text" id="docbirthdate" placeholder="Date of Birth" formControlName="docbirthdate" required>
+          <div *ngIf="signupForm.get('docbirthdate')?.invalid && signupForm.get('docbirthdate')?.touched" class="error">
+            dob is required.
+          </div>
+       </div>
+    </div>
             	
             	<input type="submit" class="btn" value="sign up">
               <span  style="font-weight: bold;">Already have an account?<button style="color: white" class="btn"  routerLink="/doctorsignin" >Sign in</button></span>
@@ -73,5 +146,5 @@
           <img src="assets/cd.png">
         </div>
     </div>
-   
 </body>
+

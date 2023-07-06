@@ -1,16 +1,18 @@
 <app-navbar></app-navbar>
 <br><br>
+<br>
+<h1 style="font-weight: bold;">Appointments</h1>
 
 <div class="container">
     <div class="row">
         <ng-container *ngFor="let item of pat; let i=index">
-            <div class="card col-md-3" style="height: 23rem;width: 13rem; ">
-                <img src="/assets/hj.png" alt=" " height="150" style="border-radius: 4px;"  >
+            <div class="card col-md-3" style="height: 25rem;width: 13rem; ">
+                <img src="/assets/1234.png" alt=" " height="150" style="border-radius: 4px;"  >
                 <p> </p>
-                <h3  style="text-align: center; font-weight: bold;" >{{item.doctor_name}}</h3>
-                <h3  style="text-align: center;" >{{item. patient_name}}</h3>
-                <h3 style="text-align: center;">{{item.admission_date}}</h3>
-                <h3 style="text-align: center;">{{item.gender}} </h3>
+                <h3  style="text-align: center; font-weight: bold;" >Doctor Name:{{item.doctor_name}}</h3>
+                <h3  style="text-align: center;" >Patient Name:{{item. patient_name}}</h3>
+                <h3 style="text-align: center;">Appoinment Date: {{item.admission_date}}</h3>
+                <h3 style="text-align: center;">Gender: {{item.gender}} </h3>
            
             </div>
         </ng-container>

@@ -1,5 +1,5 @@
 <div mat-dialog-title>
-    <h1>Doctor Form</h1>
+    <h1>Patient Form</h1>
 </div>
 <form [formGroup]="patientsForm" (ngSubmit)="onFormSubmit()">
     <div mat-dialog-content class="content">
@@ -45,10 +45,7 @@
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
 
-            <mat-form-field appearance="outline">
-                <mat-label>Prescription</mat-label>
-                <input matInput type="text" formControlName="prescription">
-            </mat-form-field>
+           
 
            
         </div>

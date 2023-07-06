@@ -19,3 +19,42 @@
     font-size: 20rem;
 }
 
+
+
+
+
+
+@media (max-width: 767px) {
+    .home .container .content h1 {
+      font-size: 30px;
+    }
+    
+    .home .container .content .h3 {
+      font-size: 10rem;
+    }
+    
+    .item {
+      margin: 0 10px;
+    }
+    
+    
+  }
+  
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    .home .container .content h1 {
+      font-size: 40px;
+    }
+  }
+  
+ 
+  @media (min-width: 992px) {
+    .home .container .content h1 {
+      font-size: 50px;
+    }
+    
+    .home .container .content .h3 {
+      font-size: 15rem;
+    }
+  }
+  

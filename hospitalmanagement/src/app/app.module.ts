@@ -51,6 +51,10 @@ import { AboutComponent } from './about/about.component';
 import { EmergencyComponent } from './emergency/emergency.component';
 import { ContactComponent } from './contact/contact.component';
 import { DepartmentComponent } from './department/department.component';
+import { DatePipe } from '@angular/common';
+import { UsericonComponent } from './usericon/usericon.component';
+import { ActivatedocComponent } from './services/activatedoc/activatedoc.component';
+import { ActivatedComponent } from './activated/activated.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,7 +83,11 @@ import { DepartmentComponent } from './department/department.component';
     AboutComponent,
     EmergencyComponent,
     ContactComponent,
-    DepartmentComponent
+    DepartmentComponent,
+    UsericonComponent,
+    ActivatedocComponent,
+    ActivatedComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -106,9 +114,10 @@ import { DepartmentComponent } from './department/department.component';
     MatMenuModule,
     MatCardModule,
     ReactiveFormsModule,
-    MatGridListModule
+    MatGridListModule,
+    
   ],
-  providers: [{provide:HTTP_INTERCEPTORS,useClass:TokenInterceptorService,multi:true}],
+  providers: [{provide:HTTP_INTERCEPTORS,useClass:TokenInterceptorService,multi:true},DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,8 +12,9 @@
   <ul class="logout-mode">
    
      <img src="assets/log.png" alt="" routerLink="/frontpage" style="height:40px ;">
-        
-   
+     <img src="assets/man.png" alt="" (click)="showalert()" style="height:40px ;"  >
+    
+     
   </ul>
    
  </nav>
@@ -23,11 +24,14 @@
 </header> 
 <br>
 
+  <div *ngIf="alertMessage" class="alert"  style="padding-top: 50px;"  >{{ alertMessage }}</div>
+  
+
   <div class="container">
     <div class="row">
         <ng-container *ngFor="let item of doc">
             <div class="card col-md-3" style="height: 22rem;width: 13rem; ">
-                <img src="/assets/jjj.png" alt=" "  >
+                <img src="/assets/ll (1).jpg" alt=" "  >
                 <p></p>
                 <h1  style="text-align: center;" >{{item.name}}</h1>
                 <h2 style="text-align: center; color: #7733ff;">{{item.department}}</h2>
@@ -40,3 +44,4 @@
 
     </div>
 </div>
+

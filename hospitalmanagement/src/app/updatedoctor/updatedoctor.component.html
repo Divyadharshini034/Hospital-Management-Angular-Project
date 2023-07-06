@@ -46,13 +46,12 @@
 
       
         <div>
-          <mat-label class="me-3">Gender : </mat-label>
-          <br>
-          <mat-radio-group aria-label="Select a gender" color="primary" formControlName="gender">
+          <mat-radio-group aria-label="Select an option" formControlName="gender">
+            <mat-label><b>Gender</b></mat-label>
             <mat-radio-button value="male">Male</mat-radio-button>
             <mat-radio-button value="female">Female</mat-radio-button>
-            <mat-radio-button value="other">Other</mat-radio-button>
-          </mat-radio-group>
+            <mat-radio-button value="others">Others</mat-radio-button>
+        </mat-radio-group>
 
           <mat-form-field class="mt-4">
             <mat-label>Department</mat-label>
@@ -72,6 +71,20 @@
             <mat-error *ngIf="doctorForm.get('birthdate')?.invalid || doctorForm.get('birthdate')?.dirty || doctorForm.get('birthdate')?.touched">Choose valid birthdate</mat-error>
           </mat-form-field>
       </div>
+
+
+      <div>
+
+        <mat-label class="me-5">Activate Status : </mat-label>
+        <br>
+        <mat-radio-group aria-label="Select a status" color="primary" formControlName="isActivated">
+          <mat-radio-button value="true">Active</mat-radio-button>
+          <mat-radio-button value="false">Deactive</mat-radio-button>
+        
+        </mat-radio-group>
+      </div>
+
+      
         </div>
 
        

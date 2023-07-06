@@ -9,19 +9,21 @@ import { Router } from '@angular/router';
 })
 export class PatientsigninComponent {
 
-
+ 
   constructor(private Service: AuthService, private router: Router) { }
 
-  login(patientemail: string, patientpassword: string): void {
-    this.Service.signInPatient(patientemail, patientpassword).subscribe(
+  login(patientusername: string, patientpassword: string): void {
+    this.Service.signInPatient(patientusername, patientpassword).subscribe(
       response => {
-        localStorage.setItem('Email', patientemail);
+        localStorage.setItem('UserName', patientusername);
+       const p=localStorage.getItem('UserName');
         const token = response;
+     
         console.log(token);
         
         const tokenString = JSON.stringify(token);
         localStorage.setItem('token', tokenString);
-        this.router.navigateByUrl('bookingappoinment');
+        this.router.navigate(['bookingappoinment'],{ queryParams: { alert: p }});
       },
       error => {
         alert("Incorrect Username/Password")

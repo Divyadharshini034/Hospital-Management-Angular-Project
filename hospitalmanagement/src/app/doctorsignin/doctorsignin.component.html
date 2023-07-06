@@ -1,13 +1,17 @@
 
+<app-navbar></app-navbar>
+<br>
+<br>
+<br>
 <body>
-	<img class="wave" src="img/wave.png">
+	
 	<div class="container">
 		<div class="img">
 			<img src="assets/ddd.png">
 		</div>
 		<div class="login-content">
 			
-      <form (ngSubmit)="login(doctoremail.value, doctorpassword.value)" action="index.html">
+      <form (ngSubmit)="login(email.value, password.value)" action="index.html">
 				<img src="assets/dd.jpg">
 				<h2 class="title">Welcome</h2>
            		<div class="input-div one">
@@ -15,7 +19,7 @@
            		   		<i class="fas fa-user"></i>
            		   </div>
            		   <div class="div">
-                  <input type="text" placeholder="Email" required #doctoremail>
+                  <input type="text" placeholder="email" required #email>
                     
            		   </div>
            		</div>
@@ -25,7 +29,7 @@
            		   </div>
            		   <div class="div">
            		   
-                  <input type="password" placeholder="Password" required #doctorpassword>
+                  <input type="password" placeholder="Password" required #password>
             	   </div>
             	</div>
             	

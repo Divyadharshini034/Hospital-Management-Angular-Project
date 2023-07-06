@@ -1,10 +1,11 @@
 export interface Doctors{
-    id:'',
-      name:'',
-      mobile:'',
-       email:'',
-       qualification:'', 
-        gender:'',
-        department:'',
-        birthdate:''
+         id:number,
+         name:string,
+         mobile:string,
+         email:string,
+         qualification:string, 
+         gender:string,
+         department:string,
+         birthdate:string,
+         isActivated:string
 }

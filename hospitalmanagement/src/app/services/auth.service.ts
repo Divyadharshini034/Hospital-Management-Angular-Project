@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { tap } from 'rxjs';
+import { BehaviorSubject, tap } from 'rxjs';
+import { DoctorService } from './doctor.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,9 @@ import { tap } from 'rxjs';
 export class AuthService {
 
   constructor(private http: HttpClient) { }
+
+
+ 
 
   signIn(adminName: string, adminPassword: string) {
     const signInData = { adminName, adminPassword };
@@ -24,26 +28,28 @@ export class AuthService {
       );
   }
  
-  signInDoctor(doctoremail: string, doctorpassword: string) {
-    const signInData = { doctoremail, doctorpassword };
+  signInDoctor(email: string, password: string) {
+    const signInData = { email, password };
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
       responseType: 'text' as 'json'
     };
-
+    
     return this.http.post<string>('https://localhost:7180/api/Token/Doctor', signInData, httpOptions)
       .pipe(
         tap(jwtToken => {
-          localStorage.setItem('doctoremail', doctoremail);
+          localStorage.setItem('email', email);
           localStorage.setItem('jwtToken', jwtToken);
+        
         })
       );
   }
 
 
+ 
 
-  signInPatient(patientemail: string, patientpassword: string) {
-    const signInData = { patientemail, patientpassword };
+  signInPatient(patientusername: string, patientpassword: string) {
+    const signInData = { patientusername, patientpassword };
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
       responseType: 'text' as 'json'
@@ -52,11 +58,13 @@ export class AuthService {
     return this.http.post<string>('https://localhost:7180/api/Token/Patient', signInData, httpOptions)
       .pipe(
         tap(jwtToken => {
-          localStorage.setItem('patientemail', patientemail);
+          localStorage.setItem('patientusername', patientusername);
           localStorage.setItem('jwtToken', jwtToken);
         })
       );
   }
+
+
 
 
   getToken()

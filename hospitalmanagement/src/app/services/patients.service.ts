@@ -42,7 +42,8 @@ export class PatientsService {
   rgpatient():Observable<any>{
     return this.httpclient.get<any>(this.apiUrl);
   }
-
+ 
+  
 
   getpatdoctname(name:any):Observable<any>{
     return this.httpclient.get<any>(`https://localhost:7180/api/Patients/${name}`);

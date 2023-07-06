@@ -24,8 +24,6 @@ export class CreatepatientsComponent {
    private service:PatientsService, private coreService:CoreService, @Inject(MAT_DIALOG_DATA) public data: any){
   
       this.patientsForm = this.fb.group({
-     
-         
          patient_name : '',
          mobile : '',
          doctor_name : '',
@@ -44,7 +42,7 @@ export class CreatepatientsComponent {
       this.service.createPatients(this.patientsForm.value).subscribe({
         next: (val: any) => {
           console.log(val);
-          this.coreService.openSnackBar('Appoinment Booking  successfully');
+          this.coreService.openSnackBar('Appoinment Booking successfully');
           this.dialogRef.close(true);
         },
         error: (err: any) => {

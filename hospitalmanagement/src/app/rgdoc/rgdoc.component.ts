@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DoctorReg } from '../models/doctorreg';
 import { DoctorService } from '../services/doctor.service';
+import { Doctors } from '../models/doctor';
 
 @Component({
   selector: 'app-rgdoc',
@@ -10,7 +11,7 @@ import { DoctorService } from '../services/doctor.service';
 export class RgdocComponent implements OnInit{
 
  drg:DoctorReg[]=[];
-
+ doctor:Doctors[]=[];
  constructor(private service:DoctorService){}
   ngOnInit(): void {
       this.getredoc()
@@ -18,9 +19,9 @@ export class RgdocComponent implements OnInit{
 
   getredoc()
   {
-this.service.getdoctorregister().subscribe(r=>{
+  this.service.getdoctorregister().subscribe(r=>{
   console.log(r);
-  this.drg=r;
+  this.doctor=r;
 })
   }
 

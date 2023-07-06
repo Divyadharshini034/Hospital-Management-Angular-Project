@@ -6,14 +6,15 @@
 <h1 style="font-weight: bolder; color: blue;">Registered Doctors</h1>
 <div class="container">
     <div class="row">
-        <ng-container *ngFor="let item of drg">
-            <div class="card col-md-3" style="height: 22rem;width: 13rem; ">
-                <img src="/assets/hj.png" alt=" "  >
+        <ng-container *ngFor="let item of doctor">
+            <div class="card col-md-3" style="height: 28rem;width: 15rem; ">
+                <img src="/assets/ll (1).jpg" alt=" "  >
                 <p></p>
-                <h1  style="text-align: center;" >{{item.doctorname}}</h1>
-                <h2 style="text-align: center;">{{item.doctorusername}}</h2>
-                <h3 style="text-align: center;">{{item.doctoremail}} </h3>
-           
+                <h1  style="text-align: center;"><span style="font-weight: bold;">Name:</span>{{item.name}}</h1>
+                <h3 style="text-align: center;"><span style="font-weight: bold;">Email:</span>{{item.email}}</h3>
+                <h3 style="text-align: center;"><span style="font-weight: bold;">Qualification:</span>{{item.qualification}} </h3>
+                <h3 style="text-align: center;"> <span style="font-weight: bold;">Department:</span> {{item.department}} </h3>
+                <h3 style="text-align: center;"><span style="font-weight: bold;">Activate Status:</span>{{item.isActivated}} </h3>
             </div>
         </ng-container>
 

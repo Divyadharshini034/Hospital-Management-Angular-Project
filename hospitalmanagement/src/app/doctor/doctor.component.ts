@@ -10,6 +10,7 @@ import { UpdatedoctorComponent } from '../updatedoctor/updatedoctor.component';
 import { Doctors } from '../models/doctor';
 import { CreatedoctorComponent } from '../createdoctor/createdoctor.component';
 import { DoctorReg } from '../models/doctorreg';
+import { ActivatedoctorService } from '../services/activatedoctor.service';
 
 @Component({
   selector: 'app-doctor',
@@ -18,17 +19,18 @@ import { DoctorReg } from '../models/doctorreg';
 })
 export class DoctorComponent implements OnInit {
   
-
+ doctorId:any;
+ 
 
   displayedColumns: string[] = [
-    'id','name', 'mobile', 'email','qualification',  'gender','department','birthdate','action'
+    'id','name', 'mobile', 'email','qualification',  'gender','department','birthdate','isActivated','action'
   ];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private dialog:MatDialog,private service:DoctorService,private coreserv:CoreService){}
+  constructor(private dialog:MatDialog,private service:DoctorService,private coreserv:CoreService,private active:ActivatedoctorService){}
   
   ngOnInit(): void {
       this.getdoctors()
@@ -97,5 +99,8 @@ export class DoctorComponent implements OnInit {
       },
     });
   }
+
+
+
 
 }

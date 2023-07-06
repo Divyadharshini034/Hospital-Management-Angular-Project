@@ -22,14 +22,15 @@ constructor(private fb: FormBuilder,
  private service:DoctorService, private coreService:CoreService, @Inject(MAT_DIALOG_DATA) public data: any){
 
     this.doctorForm = this.fb.group({
-      id:'',
-      name:'',
-      mobile:'',
-       email:'',
-       qualification:'', 
-        gender:'',
-        department:'',
-        birthdate:''
+           id:'',
+           name:'',
+           mobile:'',
+           email:'',
+           qualification:'', 
+           gender:'',
+           department:'',
+           birthdate:'',
+           isActivated:''
     });
   }
   ngOnInit(): void {

@@ -22,10 +22,17 @@ export class DoctorregisterComponent {
 
   ngOnInit(): void {
     this.signupForm = this.formBuilder.group({
-      doctorname: ['', Validators.required],
-      doctorusername: ['', Validators.required],
-      doctoremail: ['', [Validators.required, Validators.email]],
-      doctorpassword: ['', Validators.required]
+      doctorname:  ['', Validators.required],
+      doctormobile:  ['', Validators.required],
+      doctorusername:  ['', Validators.required],
+      doctoremail:  ['', Validators.required,Validators.email],
+      doctorpassword:  ['', Validators.required],
+      docqualification:  ['', Validators.required],
+      docgender:  ['', Validators.required],
+      docdepartment:  ['', Validators.required],
+      docbirthdate: ['', Validators.required]
+     
+     
     });
   }
 
@@ -41,9 +48,16 @@ export class DoctorregisterComponent {
     const dg: DoctorReg = {
 
       doctorname: this.signupForm.value.doctorname,
+      doctormobile: this.signupForm.value.doctormobile,
       doctorusername: this.signupForm.value.doctorusername,
       doctoremail: this.signupForm.value.doctoremail,
-      doctorpassword: this.signupForm.value.doctorpassword,
+      doctorpassword:  this.signupForm.value.doctorpassword,
+      docqualification:  this.signupForm.value.docqualification,
+      docgender: this.signupForm.value.docgender,
+      docdepartment: this.signupForm.value.docdepartment,
+      docbirthdate: this.signupForm.value.docbirthdate
+
+     
       
     };
 
